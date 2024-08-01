@@ -1,4 +1,6 @@
-#\循环，将lammps的dump格式文件dump.MC.{10*i}文件，例：dump.MC.{10}转换成data格式文件sro_{i}.data，例：sro_1.data。
+#1\循环，将当前目录下的lammps的dump格式文件dump.MC.{10*i}文件，例：dump.MC.{10}转换成data格式文件sro_{i}.data，例：sro_1.data。
+#2\循环，操作当前目录下的sro_{i}.data文件，交换simulation box的y和z轴。
+#1==============================================#
 from ase.io import read, write
 import re
 
@@ -16,6 +18,7 @@ for i in range(1, 1441):
 
 print('Convert dump to data completed.')
 
+#2==============================================#
 # Loop through the range of files
 for i in range(1, 1441):
     dataname = f'sro_{i}.data'
