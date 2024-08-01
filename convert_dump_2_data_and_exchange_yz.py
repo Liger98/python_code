@@ -1,3 +1,4 @@
+#\循环，将lammps的dump格式文件dump.MC.{10*i}文件，例：dump.MC.{10}转换成data格式文件sro_{i}.data，例：sro_1.data。
 from ase.io import read, write
 import re
 
