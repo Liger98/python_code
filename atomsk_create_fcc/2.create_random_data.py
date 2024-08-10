@@ -48,9 +48,9 @@ def read_and_shuffle_atoms(filename):
 def write_shuffled_data(input_filename, shuffled_atom_data, output_filename):
     try:
         with open(output_filename, 'w') as outfile:
-            # Copy the first 17 lines from the input file to the output file
+            # Copy the first 16 lines from the input file to the output file
             with open(input_filename, 'r') as infile:
-                for _ in range(17):
+                for _ in range(16):
                     line = infile.readline()
                     outfile.write(line)
             
